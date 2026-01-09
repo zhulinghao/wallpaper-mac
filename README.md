@@ -57,6 +57,7 @@ The project includes a `src/crawler.js` script used to fetch the latest wallpape
   ```
 - The crawler supports fetching the latest HD wallpapers from the Miyoushe official community and automatically merges them into `src/online-wallpapers.json`.
 
+---
 
 # Electron macOS Wallpaper Engine
 
