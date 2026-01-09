@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    font-family: -apple-system, sans-serif;
+    color: white;
+}
+
+#wallpaper-img, #wallpaper-vid, #wallpaper-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure default content is above if visible */
+}
+
+#default-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}

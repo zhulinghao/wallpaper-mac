@@ -1,0 +1,42 @@
+# Node.js / Electron Dependencies
+node_modules/
+.pnpm-store/
+
+# Build Output
+dist/
+out/
+release/
+build/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Python (Detected in workspace)
+.venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Specific
+# (If you don't want to commit the downloaded wallpapers if they were saved locally during dev)
+wallpaper_cache/
+wallpaper-config.json

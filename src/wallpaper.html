@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Electron Wallpaper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Media Containers -->
+        <img id="wallpaper-img" style="display:none;" />
+        <video id="wallpaper-vid" style="display:none;" loop muted playsinline></video>
+        <iframe id="wallpaper-frame" style="display:none;" sandbox="allow-scripts allow-same-origin"></iframe>
+        
+        <!-- Fallback/Default Content -->
+        <div id="default-content">
+            <h1>Wallpaper Engine</h1>
+            <p>Waiting for media...</p>
+        </div>
+    </div>
+    <script src="wallpaper.js"></script>
+</body>
+</html>
