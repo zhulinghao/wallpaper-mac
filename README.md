@@ -1,5 +1,65 @@
 # Electron macOS Wallpaper Engine
 
+A powerful macOS dynamic wallpaper engine built with Electron, supporting images, videos, or HTML web pages as desktop wallpapers.
+
+## Core Features
+
+- **Control Center (Dashboard)**: Provides an independent control panel to manage wallpapers for each monitor separately.
+- **Rich Media Support**:
+  - **Images**: Supports JPG, PNG, GIF, WebP, and other common formats.
+  - **Videos**: Supports MP4, WebM, MKV, MOV (auto-muted loop playback).
+  - **HTML**: Supports setting any local HTML file as an interactive wallpaper.
+- **Auto-Save State**: Automatically restores the last wallpaper settings after restart.
+- **History**: Automatically records recently used wallpapers for quick switching.
+- **Multi-Monitor Support**: Automatically detects connected monitors and supports independent settings for multiple screens.
+- **Online Gallery**: Built-in online resource library, supporting one-click download of HD static and dynamic wallpapers for popular games like "Zenless Zone Zero", "Genshin Impact", "Wuthering Waves".
+
+## Installation & Usage
+
+1. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+2. Start the application:
+   ```bash
+   pnpm start
+   ```
+
+3. Build the application (macOS):
+   ```bash
+   pnpm run build
+   ```
+   *Note: The built `.dmg` or `.app` files are located in the `dist` directory.*
+
+## Troubleshooting
+
+### 1. "App is damaged" or "can't be opened" error
+
+If you send the app to a friend and they receive the "damaged" error when opening it, this is due to macOS Gatekeeper blocking unsigned applications.
+
+**Solution:**
+
+1. Open Terminal.
+2. Enter the following command (replace the path with your actual App path):
+    ```bash
+    sudo xattr -rd com.apple.quarantine /Applications/"Wallpaper Mac.app"
+    ```
+3. Enter your password and press Enter to fix it.
+
+### 2. Crawler Script Information
+
+The project includes a `src/crawler.js` script used to fetch the latest wallpaper resources from the web.
+
+- Run the crawler:
+  ```bash
+  node src/crawler.js
+  ```
+- The crawler supports fetching the latest HD wallpapers from the Miyoushe official community and automatically merges them into `src/online-wallpapers.json`.
+
+
+# Electron macOS Wallpaper Engine
+
 一个基于 Electron 构建的强大 macOS 动态壁纸引擎，支持将图片、视频或 HTML 网页设置为桌面壁纸。
 
 ## 核心功能
