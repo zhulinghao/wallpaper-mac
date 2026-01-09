@@ -2,6 +2,10 @@
   "name": "wallpaper-mac",
   "version": "1.0.0",
   "description": "A powerful macOS wallpaper engine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhulinghao/wallpaper-mac.git"
+  },
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
@@ -11,6 +15,13 @@
   "build": {
     "appId": "com.wallpaper.mac",
     "productName": "Wallpaper Mac",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "zhulinghao",
+        "repo": "wallpaper-mac"
+      }
+    ],
     "mac": {
       "target": {
         "target": "default",
